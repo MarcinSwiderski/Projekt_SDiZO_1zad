@@ -74,10 +74,9 @@ void listDelete(int sizeOfStrucutre, unsigned numberOfRepeats, vector<int> &data
         for(int i = 0; i < sizeOfStrucutre; i++){
             testList.add(dataFromCsvVector[i]);
         }
-        int randomIndex = rand() % sizeOfStrucutre;
-        int randomValue = dataFromCsvVector[randomIndex];
+        int lastValue = dataFromCsvVector[sizeOfStrucutre-1];
         listTimeStart = high_resolution_clock::now();
-        testList.remove(randomValue);
+        testList.remove(lastValue);
         listTimeStop = high_resolution_clock::now();
         timeSpentOnInstance += duration_cast<duration<double>>(listTimeStop - listTimeStart);
     }

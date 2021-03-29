@@ -6,6 +6,8 @@
 #define UNTITLED_STACKOPERATIONS_H
 #include "Structures/Stack/Stack.h"
 using namespace std::chrono;
+high_resolution_clock::time_point t_start;
+high_resolution_clock::time_point t_end;
 
 void stackCreate(int sizeOfStrucutre, unsigned repeatsPerInstance, vector<int> &dataFromCsvVector, vector<string> &results) {
     high_resolution_clock::time_point t_start = high_resolution_clock::now();
@@ -26,8 +28,6 @@ void stackSearch(int size_of_stack, unsigned number_of_repeats, vector<int> &dat
     for (int i = 0; i < size_of_stack; i++) {
         test_stack.push(data_vector[i]);
     }
-    high_resolution_clock::time_point t_start = high_resolution_clock::now();
-    high_resolution_clock::time_point t_end = high_resolution_clock::now();
     duration<double> time_span = duration<double>(0);
     srand(time(NULL));
     for (int repeat = 0; repeat < number_of_repeats; repeat++) {
@@ -60,8 +60,6 @@ void stackSearch(int size_of_stack, unsigned number_of_repeats, vector<int> &dat
 }
 
 void stackPush(int sizeOfStrucutre, unsigned numberOfRepeats, vector<int> &dataFromCsvVector, vector<string> &results_parser) {
-    high_resolution_clock::time_point t_start = high_resolution_clock::now();
-    high_resolution_clock::time_point t_end = high_resolution_clock::now();
     duration<double> time_span = duration<double>(0);
     for (int repeat = 0; repeat < numberOfRepeats; repeat++) {
         Stack testStack = Stack();
@@ -79,8 +77,6 @@ void stackPush(int sizeOfStrucutre, unsigned numberOfRepeats, vector<int> &dataF
 }
 
 void stackPop(int sizeOfStrucutre, unsigned numberOfRepeats, vector<int> &dataFromCsvVector, vector<string> &results_parser) {
-    high_resolution_clock::time_point t_start = high_resolution_clock::now();
-    high_resolution_clock::time_point t_end = high_resolution_clock::now();
     duration<double> time_span = duration<double>(0);
     for (int repeat = 0; repeat < numberOfRepeats; repeat++) {
         Stack test_stack = Stack();
