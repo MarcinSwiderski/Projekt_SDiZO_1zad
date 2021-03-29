@@ -41,7 +41,7 @@ private:
 public:
     List();
 
-    bool find(int data);
+    int find(int data);
 
     void add(int data);
 

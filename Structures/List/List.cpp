@@ -25,16 +25,18 @@ void List::add(int data) {
     incrementSize();
 
 }
-bool List::find(int data) {
+int List::find(int data) {
     node_ptr currentNodePtr = this->head;
+    int iter = 0;
     while (currentNodePtr != nullptr)
     {
         if((currentNodePtr->data) == data){
-            return true;
+            return iter;
         }
         currentNodePtr = currentNodePtr->nextNode;
+        iter++;
     }
-    return false;
+    return -1;
 }
 bool List::remove(int data) {
     node_ptr prevNodePtr = nullptr;

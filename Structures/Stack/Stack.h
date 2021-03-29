@@ -30,29 +30,11 @@ public:
 
     ~Stack();
 
-    int push(int n) {
-        if (isFull()) {
-            return 0;
-        }
-        ++top;
-        num[top] = n;
-        return n;
-    }
+    bool push(int n);
 
-    int pop() {
-        int temp;
-        if (isEmpty())
-            return 0;
-        temp = num[top];
-        --top;
-        return temp;
-    }
+    bool pop();
 
-    int peek() {
-        if (isEmpty())
-            return 0;
-        return num[top];
-    }
+    int peek();
 };
 
 

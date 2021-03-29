@@ -7,13 +7,26 @@
 
 
 class Queue {
-public:
-    int front, rear, size;
+private:
+    int size;
     unsigned int capacity;
     int *array;
 
+
+public:
     Queue();
     ~Queue();
+
+    void pushBack(int n);
+
+    bool popFront();
+
+    int _size() { return size; }
+
+    int front();
+
+    int back();
+
 };
 
 

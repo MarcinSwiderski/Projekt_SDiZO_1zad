@@ -11,3 +11,27 @@ Stack::Stack() {
 Stack::~Stack() {
     delete[] num;
 }
+
+bool Stack::push(int n) {
+    if (isFull()) {
+        return false;
+    }
+    ++top;
+    num[top] = n;
+    return true;
+}
+
+bool Stack::pop() {
+    if (isEmpty())
+        return false;
+    --top;
+    return true;
+}
+
+int Stack::peek() {
+    if (isEmpty())
+        return 0;
+    return num[top];
+}
+
+
